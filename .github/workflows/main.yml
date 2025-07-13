@@ -33,7 +33,7 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
 
-    - name: Install Windows 10.0.16299.0 SDK
+    - name: Install Windows 10.0.16299.91 SDK
       shell: powershell
       run: |
         Invoke-WebRequest -Method Get -Uri https://go.microsoft.com/fwlink/p/?linkid=864422 -OutFile sdksetup.exe -UseBasicParsing
