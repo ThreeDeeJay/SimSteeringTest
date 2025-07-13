@@ -37,7 +37,7 @@ jobs:
       shell: powershell
       run: |
         Invoke-WebRequest -Method Get -Uri https://go.microsoft.com/fwlink/p/?linkid=864422 -OutFile sdksetup.exe -UseBasicParsing
-        Start-Process -Wait sdksetup.exe -ArgumentList "/q", "/norestart", "/features", "OptionId.WindowsDesktopSoftwareDevelopmentKit", "OptionId.NetFxSoftwareDevelopmentKit"
+        Start-Process -Wait sdksetup.exe -ArgumentList "/q", "/norestart"
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
